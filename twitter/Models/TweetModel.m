@@ -30,7 +30,7 @@
         self.text = dictionary[@"text"];
         self.favoriteCount = [dictionary[@"favorite_count"] intValue];
         self.favorited = [dictionary[@"favorited"] boolValue];
-        self.retweetCount = [dictionary[@"retweeet_count"] intValue];
+        self.retweetCount = [dictionary[@"retweet_count"] intValue];
         self.retweeted = [dictionary[@"retweeted"] boolValue];
         self.createdAtString = dictionary[@"created_at"];
         
