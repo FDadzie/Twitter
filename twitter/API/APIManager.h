@@ -8,6 +8,7 @@
 
 #import "BDBOAuth1SessionManager.h"
 #import "BDBOAuth1SessionManager+SFAuthenticationSession.h"
+#import "TweetModel.h"
 
 @interface APIManager : BDBOAuth1SessionManager
 
@@ -15,5 +16,5 @@
 
 - (void)getHomeTimelineWithCompletion:(void(^)(NSArray *tweets, NSError *error))completion;
 // Add function for each API request
-
+- (void)postStatusWithText:(NSString *)text completion:(void (^)(TweetModel *model, NSError *error))completion;
 @end
