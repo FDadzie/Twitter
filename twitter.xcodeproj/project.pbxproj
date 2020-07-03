@@ -21,6 +21,7 @@
 		9EB6D0A824ABFE45002F2537 /* TweetModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EB6D0A724ABFE45002F2537 /* TweetModel.m */; };
 		9EB6D0B124AD2BC7002F2537 /* TweetCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EB6D0B024AD2BC7002F2537 /* TweetCell.m */; };
 		9ECCD24E24AE7F4600B9EBA6 /* ComposeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9ECCD24D24AE7F4600B9EBA6 /* ComposeViewController.m */; };
+		9ECCD25324AF02C800B9EBA6 /* TweetDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9ECCD25224AF02C800B9EBA6 /* TweetDetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +52,8 @@
 		9EB6D0B024AD2BC7002F2537 /* TweetCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TweetCell.m; sourceTree = "<group>"; };
 		9ECCD24C24AE7F4600B9EBA6 /* ComposeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ComposeViewController.h; sourceTree = "<group>"; };
 		9ECCD24D24AE7F4600B9EBA6 /* ComposeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ComposeViewController.m; sourceTree = "<group>"; };
+		9ECCD25124AF02C800B9EBA6 /* TweetDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TweetDetailViewController.h; sourceTree = "<group>"; };
+		9ECCD25224AF02C800B9EBA6 /* TweetDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TweetDetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +152,8 @@
 				6AD2790820BCC04D0085BC29 /* TimelineViewController.m */,
 				9ECCD24C24AE7F4600B9EBA6 /* ComposeViewController.h */,
 				9ECCD24D24AE7F4600B9EBA6 /* ComposeViewController.m */,
+				9ECCD25124AF02C800B9EBA6 /* TweetDetailViewController.h */,
+				9ECCD25224AF02C800B9EBA6 /* TweetDetailViewController.m */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -262,6 +267,7 @@
 				9EB6D0A524ABFAE2002F2537 /* UserModel.m in Sources */,
 				6AD2790620BCC0380085BC29 /* LoginViewController.m in Sources */,
 				6AD278DA20BC4B950085BC29 /* AppDelegate.m in Sources */,
+				9ECCD25324AF02C800B9EBA6 /* TweetDetailViewController.m in Sources */,
 				6AD278F620BCB68B0085BC29 /* APIManager.m in Sources */,
 				6AD2790920BCC04D0085BC29 /* TimelineViewController.m in Sources */,
 			);

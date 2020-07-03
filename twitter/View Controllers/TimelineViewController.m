@@ -12,6 +12,9 @@
 #import "UIImageView+AFNetworking.h"
 #import "TweetModel.h"
 #import "ComposeViewController.h"
+#import "TweetDetailViewController.h"
+#import "AppDelegate.h"
+#import "LoginViewController.h"
 
 @interface TimelineViewController () <UITableViewDelegate, UITableViewDataSource>
 @end
@@ -37,6 +40,18 @@
     [self.tableView insertSubview:self.refreshControl atIndex :0];
 
 }
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [self performSegueWithIdentifier:@"showDetail" sender:self];
+}
+- (IBAction)didTapLogout:(id)sender {
+    AppDelegate *appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
+        
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    LoginViewController *loginViewController = [storyboard instantiateViewControllerWithIdentifier:@"LoginViewController"];
+    appDelegate.window.rootViewController = loginViewController;
+    [[APIManager shared] logout];
+}
+
 - (void)fetchTweets {
     // Get timeline
     [[APIManager shared] getHomeTimelineWithCompletion:^(NSArray *tweets, NSError *error) {
@@ -98,14 +113,37 @@
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
+
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([[segue identifier] isEqualToString:@"showDetail"])
+    {
+        UITableViewCell *tappedCell = sender;
+        NSIndexPath *indexPath = [self.tableView indexPathForCell:tappedCell];
+        NSDictionary *tweet = self.tweets[indexPath.row];
+        TweetDetailViewController *tweetViewController = [segue destinationViewController];
+        tweetViewController.tweet = tweet;
+
+    } else {
+    
     UINavigationController *navigationController = [segue destinationViewController];
     ComposeViewController *composeController = (ComposeViewController*)navigationController.topViewController;
     composeController.delegate = self;
+    
+    }
+        // Make sure your segue name in storyboard is the same as this line
+        
+    
+    /*
+    UITableViewCell *tappedCell = sender;
+    NSIndexPath *indexPath = [self.tableView indexPathForCell:tappedCell];
+    NSDictionary *tweeter = self.tweets[indexPath.row];
+    
+    ;
+    
+     */
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
 }
-
 
 - (void)didTweet:(nonnull TweetModel *)tweet {
     [self.tableView reloadData];

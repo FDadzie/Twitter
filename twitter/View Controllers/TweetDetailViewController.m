@@ -1,0 +1,66 @@
+//
+//  TweetDetailViewController.m
+//  twitter
+//
+//  Created by fdadzie20 on 7/3/20.
+//  Copyright © 2020 Emerson Malca. All rights reserved.
+//
+
+#import "TweetDetailViewController.h"
+#import "UIImageView+AFNetworking.h"
+
+
+
+@interface TweetDetailViewController () 
+@property (weak, nonatomic) IBOutlet UIImageView *profileImg;
+@property (weak, nonatomic) IBOutlet UILabel *profileLabel;
+@property (weak, nonatomic) IBOutlet UILabel *handleLabel;
+@property (weak, nonatomic) IBOutlet UILabel *createdLabel;
+@property (weak, nonatomic) IBOutlet UILabel *tweetLabel;
+@property (weak, nonatomic) IBOutlet UILabel *retweetLabel;
+@property (weak, nonatomic) IBOutlet UILabel *favoriteLabel;
+@property (weak, nonatomic) IBOutlet UIButton *retweetImg;
+@property (weak, nonatomic) IBOutlet UIButton *favoriteImg;
+
+@end
+
+@implementation TweetDetailViewController
+
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    /*
+    NSString *profileURLString = self.tweet[@"_profileImageUrl"];
+       NSString *clearProfileURLString = [profileURLString stringByReplacingOccurrencesOfString:@"_normal" withString:@""];
+       
+       NSURL *profileURL = [NSURL URLWithString:clearProfileURLString];
+    self.profileImg.image = nil;
+       [self.profileImg setImageWithURL:profileURL];
+
+    self.tweetLabel.text = self.tweet[@"text"];
+    NSString *favoriteStr = [NSString stringWithFormat:@"%@", self.tweet[@"favorite_count"]];
+    self.favoriteLabel.text = favoriteStr;
+    self.profileLabel.text = self.tweet[@"name"];
+    self.handleLabel.text = self.tweet[@"screen_name"];
+    NSString *retweetStr = [NSString stringWithFormat:@"%@", self.tweet[@"retweet.count"]];
+    self.retweetLabel.text = retweetStr;
+    self.createdLabel.text = self.tweet[@"created_at"];
+
+    [self.profileLabel sizeToFit];
+    [self.tweetLabel sizeToFit];
+    [self.handleLabel sizeToFit];
+     */
+}
+
+    
+/*
+#pragma mark - Navigation
+
+// In a storyboard-based application, you will often want to do a little preparation before navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
+}
+*/
+
+@end
