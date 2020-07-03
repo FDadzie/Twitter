@@ -85,6 +85,13 @@
     cell.retweetCount.text = retweetStr;
     cell.createdAt.text = tweet.createdAtString;
     
+
+    NSString *profileURLString = tweet.user.profileImageUrl;
+    NSString *clearProfileURLString = [profileURLString stringByReplacingOccurrencesOfString:@"_normal" withString:@""];
+    
+    NSURL *profileURL = [NSURL URLWithString:clearProfileURLString];
+    cell.profileImage.image = nil;
+    [cell.profileImage setImageWithURL:profileURL];
     return cell;
 }
 
