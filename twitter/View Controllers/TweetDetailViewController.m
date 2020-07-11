@@ -29,27 +29,27 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    /*
-    NSString *profileURLString = self.tweet[@"_profileImageUrl"];
+    
+    NSString *profileURLString = self.tweet.user.profileImageUrl;
        NSString *clearProfileURLString = [profileURLString stringByReplacingOccurrencesOfString:@"_normal" withString:@""];
        
        NSURL *profileURL = [NSURL URLWithString:clearProfileURLString];
     self.profileImg.image = nil;
        [self.profileImg setImageWithURL:profileURL];
-
-    self.tweetLabel.text = self.tweet[@"text"];
-    NSString *favoriteStr = [NSString stringWithFormat:@"%@", self.tweet[@"favorite_count"]];
+     
+    self.tweetLabel.text = self.tweet.text;
+    NSString *favoriteStr = [NSString stringWithFormat:@"%d", self.tweet.favoriteCount];
     self.favoriteLabel.text = favoriteStr;
-    self.profileLabel.text = self.tweet[@"name"];
-    self.handleLabel.text = self.tweet[@"screen_name"];
-    NSString *retweetStr = [NSString stringWithFormat:@"%@", self.tweet[@"retweet.count"]];
+    self.profileLabel.text = self.tweet.user.name;
+    self.handleLabel.text = self.tweet.user.screenName;
+    NSString *retweetStr = [NSString stringWithFormat:@"%d", self.tweet.retweetCount];
     self.retweetLabel.text = retweetStr;
-    self.createdLabel.text = self.tweet[@"created_at"];
+    self.createdLabel.text = self.tweet.createdAtString;
 
     [self.profileLabel sizeToFit];
     [self.tweetLabel sizeToFit];
     [self.handleLabel sizeToFit];
-     */
+
 }
 
     

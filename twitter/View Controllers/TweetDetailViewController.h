@@ -7,12 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "TweetModel.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface TweetDetailViewController : UIViewController
 
-@property (nonatomic, strong) NSDictionary *tweet;
+@property (nonatomic, strong) TweetModel *tweet;
 @end
 
 NS_ASSUME_NONNULL_END
